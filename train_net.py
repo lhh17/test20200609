@@ -26,7 +26,8 @@ from fcos_core.utils.imports import import_file
 from fcos_core.utils.logger import setup_logger
 from fcos_core.utils.miscellaneous import mkdir
 from tensorboardX import SummaryWriter
-os.environ['CUDA_VISIBLE_DEVICES'] = '2,3,4,5'
+
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 def train(cfg, local_rank, distributed):
     model = build_detection_model(cfg)
